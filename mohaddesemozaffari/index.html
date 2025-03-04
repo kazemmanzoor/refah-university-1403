@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزومه محدثه مظفری</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            direction: rtl;
+        }
+        body {
+            font-family: 'Vazirmatn', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4bf0ff, #d994ff);
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            background: #dcdada;
+            border-radius: 15px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transform: scale(1.02);
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            font-size: 45px;
+            color: #2980b9;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        header p {
+            font-size: 20px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        header::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background-color: #2980b9;
+            margin: 20px auto 0;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+            background: #ecf0f1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .section-header {
+            font-size: 24px;
+            font-weight: 600;
+            color: #3498db;
+            padding: 10px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+        }
+        .section-header:hover {
+            color: #2980b9;
+            transform: scale(1.05);
+        }
+        .section-content {
+            display: none;
+            padding-left: 20px;
+            margin-top: 15px;
+            transition: all 0.5s ease;
+        }
+        .skills ul, .experience ul, .education ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .skills li, .experience li, .education li {
+            font-size: 18px;
+            color: #34495e;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            transition: all 0.3s ease;
+        }
+        .skills li:before, .experience li:before, .education li:before {
+            content: '►';
+            position: absolute;
+            left: 0;
+            color: #2980b9;
+            font-size: 18px;
+        }
+        .experience .job-title {
+            font-weight: bold;
+            font-size: 20px;
+            color: #3498db;
+        }
+        .experience .company-name {
+            font-weight: 500;
+            color: #2980b9;
+        }
+        .education .degree, .education .institution {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        /* Icon Animation */
+        .icon {
+            font-size: 30px;
+            margin-right: 15px;
+            color: #3498db;
+            transition: all 0.3s ease;
+        }
+        .icon:hover {
+            transform: rotate(360deg);
+            color: #2980b9;
+        }
+
+        /* Animation for Hover Effects */
+        .section-content li:hover {
+            transform: translateX(-15px);
+            color: #2980b9;
+        }
+    </style>
+    <style>
+        /* استایل پایه برای لینک‌ها */
+        a {
+            text-decoration: none; /* خط زیر لینک حذف می‌شود */
+            color: #007BFF; /* رنگ لینک آبی */
+            font-weight: 500; /* وزن قلم کمی بیشتر */
+            transition: color 0.3s, border-bottom 0.3s; /* انیمیشن برای تغییر رنگ و اضافه شدن خط زیر */
+        }
+
+        /* تغییر رنگ لینک هنگام قرار گرفتن موس روی آن */
+        a:hover {
+            color: #0056b3; /* رنگ لینک در حالت هاور */
+            border-bottom: 2px solid #0056b3; /* اضافه کردن خط زیر لینک */
+        }
+
+        /* حالت فعال برای لینک */
+        a:active {
+            color: #004085; /* رنگ لینک در حالت کلیک */
+            border-bottom: 2px solid #004085; /* خط زیر فعال */
+        }
+
+        /* لینک‌های باز شده در تب جدید */
+        a[target="_blank"]:after {
+            content: " 🔗"; /* اضافه کردن آیکن لینک جدید */
+            font-size: 0.8em;
+            vertical-align: middle;
+        }
+    </style>
+    <style>
+        /* استایل پایه برای لینک‌ها */
+        a {
+            text-decoration: none; /* خط زیر لینک حذف می‌شود */
+            color: #007BFF; /* رنگ لینک آبی */
+            font-weight: 500; /* وزن قلم کمی بیشتر */
+            transition: color 0.3s, border-bottom 0.3s; /* انیمیشن برای تغییر رنگ و اضافه شدن خط زیر */
+        }
+
+        /* تغییر رنگ لینک هنگام قرار گرفتن موس روی آن */
+        a:hover {
+            color: #0056b3; /* رنگ لینک در حالت هاور */
+            border-bottom: 2px solid #0056b3; /* اضافه کردن خط زیر لینک */
+        }
+
+        /* حالت فعال برای لینک */
+        a:active {
+            color: #004085; /* رنگ لینک در حالت کلیک */
+            border-bottom: 2px solid #004085; /* خط زیر فعال */
+        }
+
+        /* لینک‌های باز شده در تب جدید */
+        a[target="_blank"]:after {
+            content: " 🔗"; /* اضافه کردن آیکن لینک جدید */
+            font-size: 0.8em;
+            vertical-align: middle;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>محدثه مظفری</h1>
+        <p>دانشجوی مهندسی کامپیوتر دانشکده رفاه</p>
+    </header>
+
+    <section class="section">
+        <div class="section-header" onclick="toggleContent('contact-info-content')">
+            <span class="icon">📞</span>اطلاعات تماس
+        </div>
+        <div id="contact-info-content" class="section-content">
+            <p>ایمیل : mohaddesemozaffari2@gmail.com</p>
+            <p>تلفن: 09359130536</p>
+            <p>آدرس: تهران، پیروزی،پورمند</p>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-header" onclick="toggleContent('about-me-content')">
+            <span class="icon">📝</span>درباره من
+        </div>
+        <div id="about-me-content" class="section-content">
+            <p><strong>سال تولد:</strong> ۱۳۸۲</p>
+<!--            <p><strong>وضعیت سربازی:</strong> مشمول</p>-->
+            <p><strong>وضعیت تأهل:</strong> مجرد</p>
+
+            <p><strong>مهارت‌ها و تجربه:</strong></p>
+            <ul>
+                <li>علاقه‌مند به یادگیری و کسب تجربه در زمینه‌های مختلف فناوری.</li>
+                <li>آشنایی کامل با وردپرس و توانایی مدیریت سایت‌ها و افزونه‌ها.</li>
+                <li>مهارت در برنامه‌نویسی تحت وب با زبان‌های HTML و CSS.</li>
+<!--                <li>آشنایی متوسط با زبان پایتون برای توسعه ابزارهای کوچک و اسکریپت‌ها.</li>-->
+<!--                <li>آشنایی ابتدایی با ابزارهای گرافیکی (نرم‌افزارهایی مانند Photoshop و Illustrator).</li>-->
+                <li>توانایی کار با مجموعه برنامه‌های آفیس (ورد، اکسل، پاورپوینت) به صورت حرفه‌ای.</li>
+<!--                <li>توانایی تشخیص و حل مشکلات سخت‌افزاری سیستم‌ها به صورت غیرمستقیم (بدون نیاز به تعمیر قطعه).</li>-->
+<!--                <li>آشنایی با نصب و پیکربندی نرم‌افزارها و سیستم‌عامل‌ها (ویندوز، لینوکس و مک).</li>-->
+<!--                <li>علاقه‌مند به مباحث هوش مصنوعی و توانایی استفاده بهینه از آن در پروژه‌ها و بهینه‌سازی فرایندهای کاری.</li>-->
+            </ul>
+
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="section-header" onclick="toggleContent('skills-content')">
+            <span class="icon">💼</span>مهارت‌ها
+        </div>
+        <div id="skills-content" class="section-content">
+            <ul>
+                <li>وردپرس</li>
+                <li>HTML</li>
+                <li>CSS</li>
+<!--                <li>Python</li>-->
+                <li>آشنایی با هوش مصنوعی</li>
+                <li>کار با آفیس (ورد، اکسل، پاورپوینت)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-header" onclick="toggleContent('experience-content')">
+            <span class="icon">💻</span>تجربیات کاری
+        </div>
+        <div id="experience-content" class="section-content">
+            <ul>
+                <li>
+                    <div class="job-title">کاراموزی</div>
+                    <div class="company-name">شرکت جاودان انرژی مهر</div>
+                    <p>از مهر ۱۴۰۳ تا دی ماه ۱۴۰۳</p>
+                    <p><a href="https://javdanenergy.ir">لینک وبسایت اول </a></p>
+                    <p><a href="https://javdanenergy.com">لینک وبسایت دوم</a></p>
+                </li>
+                <li>
+                    <div class="job-title">پشتیبان و طراح وبسایت</div>
+                    <div class="company-name">موسسه فرهنگی راه روشن</div>
+                    <p>از مهر ۱۴۰۳ تا دی ماه ۱۴۰۳</p>
+                    <p><a href="https://kfraheroshan.com/">لینک وبسایت</a></p>
+                </li>
+
+                <li>
+                    <div class="job-title">عکاسی </div>
+                    <div class="company-name">دبیرستان دوره اول محبوبه دانش</div>
+                    <p>از مهر ۱۴۰۳ تا دی ماه ۱۴۰۳</p>
+                </li>
+                <li>
+                    <div class="job-title">تایپیست</div>
+                    <div class="company-name">مدرسه صهبا</div>
+                    <p>از آذر ۱۴۰۳ تا أذر ماه ۱۴۰۳</p>
+                    <p>تایپ سوالات امتحانی و کلید سوالات</p>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-header" onclick="toggleContent('education-content')">
+            <span class="icon">🎓</span>تحصیلات
+        </div>
+        <div id="education-content" class="section-content">
+            <ul>
+                <li>
+                    <div class="degree">محصل مهندسی کامپیوتر</div>
+                    <div class="institution">دانشکده رفاه</div>
+                    <p><strong>تاریخ فارغ‌التحصیلی: </strong>۱۴۰۴</p>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <div class="degree">دیپلم ریاضی</div>
+                    <div class="institution">دبیرستان شاهد حضرت زینب (س) </div>
+                    <p><strong>تاریخ فارغ‌التحصیلی: </strong>۱۴۰۰</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<script>
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        if (content.style.display === 'none' || content.style.display === '') {
+            content.style.display = 'block';
+            content.classList.add('animated');
+        } else {
+            content.style.display = 'none';
+        }
+    }
+</script>
+</body>
+</html>
