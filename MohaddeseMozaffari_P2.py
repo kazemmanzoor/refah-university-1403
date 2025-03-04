@@ -1,14 +1,11 @@
-def is_prime(n):
-    if n < 2:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-def largest_two_digit_prime():
-    for num in range(99, 9, -1):
-        if is_prime(num):
-            return num
-
-print(largest_two_digit_prime())
+for num in range(99, 9, -1):
+    if num < 2:
+        continue
+    is_prime = True
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(num)
+        break
